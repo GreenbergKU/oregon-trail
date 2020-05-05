@@ -1,5 +1,5 @@
 var assert = require('chai').assert;
-var Part = require('../src/part.js');
+var Part = require('../src/classOregonTrail-NOTES/partNotes.js');
 
 describe('Part', function() {
   it('should have a type', function() {
