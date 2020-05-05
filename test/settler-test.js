@@ -1,5 +1,5 @@
 var assert = require('chai').assert;
-var Settler = require('../src/settler.js');
+var Settler = require('../src/classOregonTrail-NOTES/settlerNotes.js');
 
 describe('Settler', function() {
   it('should have a name', function() {
