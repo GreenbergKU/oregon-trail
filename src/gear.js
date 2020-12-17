@@ -9,5 +9,3 @@ class Gear {
 
 
 module.exports = Gear;
-//npm test test/gear-test.js
-
