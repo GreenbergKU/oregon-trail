@@ -5,172 +5,172 @@ var Gear = require('../src/gear.js');
 var Settler = require('../src/settler.js');
 
 describe('Wagon', function() {
-  it.skip('should have a name', function() {
+  it('should have a name', function() {
     var wagon = new Wagon({ name: 'Voyager' });
 
     assert.equal(wagon.name, 'Voyager');
-  })
+  });
 
-  it.skip('should be able to have different name', function() {
+  it('should be able to have different name', function() {
     var wagon = new Wagon({ name: 'New Horizons' });
 
     assert.equal(wagon.name, 'New Horizons');
-  })
+  });
 
-  it.skip('should have no wheels by default', function() {
+  it('should have no wheels by default', function() {
     var wagon = new Wagon({ name: 'New Horizons' });
 
     assert.deepEqual(wagon.wheels, []);
-  })
+  });
 
-  it.skip('should be able to be constructed with wheels', function() {
-    var wheel = new Part('wheel')
+  it('should be able to be constructed with wheels', function() {
+    var wheel = new Part('wheel');
     var wagon = new Wagon({ name: 'New Horizons', wheels: [wheel] });
 
     assert.deepEqual(wagon.wheels, [wheel]);
-  })
+  });
 
-  it.skip('should have no axles by default', function() {
+  it('should have no axles by default', function() {
     var wagon = new Wagon({ name: 'New Horizons' });
 
     assert.deepEqual(wagon.axles, []);
-  })
+  });
 
-  it.skip('should be able to be constructed with axles', function() {
+  it('should be able to be constructed with axles', function() {
     var axle = new Part('axle');
     var wagon = new Wagon({ name: 'New Horizons', axles: [axle] });
 
     assert.deepEqual(wagon.axles, [axle]);
-  })
+  });
 
-  it.skip('should have no oxen by default', function() {
+  it('should have no oxen by default', function() {
     var wagon = new Wagon({ name: 'New Horizons' });
 
     assert.deepEqual(wagon.oxen, []);
-  })
+  });
 
-  it.skip('should be able to be constructed with oxen', function() {
-    var ox = new Part('ox')
+  it('should be able to be constructed with oxen', function() {
+    var ox = new Part('ox');
     var wagon = new Wagon({ name: 'New Horizons', oxen: [ox] });
 
     assert.deepEqual(wagon.oxen, [ox]);
-  })
+  });
 
-  it.skip('should have no yokes by default', function() {
+  it('should have no yokes by default', function() {
     var wagon = new Wagon({ name: 'New Horizons' });
 
     assert.deepEqual(wagon.yokes, []);
-  })
+  });
 
-  it.skip('should be able to be constructed with yokes', function() {
+  it('should be able to be constructed with yokes', function() {
     var yoke = new Part('yoke');
     var wagon = new Wagon({ name: 'New Horizons', yokes: [yoke] });
 
-    assert.deepEqual(wagon.yokes, [yoke])
-  })
+    assert.deepEqual(wagon.yokes, [yoke]);
+  });
 
-  it.skip('should be able to have food', function() {
+  it('should be able to have food', function() {
     var food = new Gear('food', 10);
     var wagon = new Wagon({ name: 'New Horizons', food: food });
 
-    assert.equal(wagon.food, food)
-  })
+    assert.equal(wagon.food, food);
+  });
 
-  it.skip('should be able to have food of a different quantity', function() {
+  it('should be able to have food of a different quantity', function() {
     var food = new Gear('food', 15);
     var wagon = new Wagon({ name: 'New Horizons', food: food });
 
-    assert.equal(wagon.food, food)
-  })
+    assert.equal(wagon.food, food);
+  });
 
-  it.skip('should be able to have ammunition', function() {
-    var ammunition = new Gear('ammunition', 1000)
+  it('should be able to have ammunition', function() {
+    var ammunition = new Gear('ammunition', 1000);
     var wagon = new Wagon({ name: 'New Horizons', ammunition: ammunition });
 
-    assert.equal(wagon.ammunition, ammunition)
-  })
+    assert.equal(wagon.ammunition, ammunition);
+  });
 
-  it.skip('should be able to have ammunition of a different quantity', function() {
-    var ammunition = new Gear('ammunition', 2000)
+  it('should be able to have ammunition of a different quantity', function() {
+    var ammunition = new Gear('ammunition', 2000);
     var wagon = new Wagon({ name: 'New Horizons', ammunition: ammunition });
 
-    assert.equal(wagon.ammunition, ammunition)
-  })
+    assert.equal(wagon.ammunition, ammunition);
+  });
 
-  it.skip('should be able to have clothes', function() {
-    var clothes = new Gear('clothes', 5)
+  it('should be able to have clothes', function() {
+    var clothes = new Gear('clothes', 5);
     var wagon = new Wagon({ name: 'New Horizons', clothes: clothes });
 
-    assert.equal(wagon.clothes, clothes)
-  })
+    assert.equal(wagon.clothes, clothes);
+  });
 
-  it.skip('should be able to have clothes of a different quantity', function() {
-    var clothes = new Gear('clothes', 8)
+  it('should be able to have clothes of a different quantity', function() {
+    var clothes = new Gear('clothes', 8);
     var wagon = new Wagon({ name: 'New Horizons', clothes: clothes });
 
-    assert.equal(wagon.clothes, clothes)
-  })
+    assert.equal(wagon.clothes, clothes);
+  });
 
-  it.skip('should be able to add a wheel', function() {
-    var wheel = new Part('wheel')
+  it('should be able to add a wheel', function() {
+    var wheel = new Part('wheel');
     var wagon = new Wagon({ name: 'Voyager' });
 
-    wagon.addPart(wheel)
+    wagon.addPart(wheel);
 
-    assert.deepEqual(wagon.wheels, [wheel])
-  })
+    assert.deepEqual(wagon.wheels, [wheel]);
+  });
 
-  it.skip('should be able to add an axle', function() {
-    var axle = new Part('axle')
+  it('should be able to add an axle', function() {
+    var axle = new Part('axle');
     var wagon = new Wagon({ name: 'Voyager' });
 
-    wagon.addPart(axle)
+    wagon.addPart(axle);
 
-    assert.deepEqual(wagon.axles, [axle])
-  })
+    assert.deepEqual(wagon.axles, [axle]);
+  });
 
-  it.skip('should be able to add an ox', function() {
-    var ox = new Part('ox')
+  it('should be able to add an ox', function() {
+    var ox = new Part('ox');
     var wagon = new Wagon({ name: 'Voyager' });
 
-    wagon.addPart(ox)
+    wagon.addPart(ox);
 
-    assert.deepEqual(wagon.oxen, [ox])
-  })
+    assert.deepEqual(wagon.oxen, [ox]);
+  });
 
-  it.skip('should be able to add a yoke', function() {
-    var yoke = new Part('yoke')
-    var wagon = new Wagon({ name: 'Voyager' })
+  it('should be able to add a yoke', function() {
+    var yoke = new Part('yoke');
+    var wagon = new Wagon({ name: 'Voyager' });
 
-    wagon.addPart(yoke)
+    wagon.addPart(yoke);
 
-    assert.deepEqual(wagon.yokes, [yoke])
-  })
+    assert.deepEqual(wagon.yokes, [yoke]);
+  });
 
-  it.skip('should not add an invalid part to any of the arrays', function() {
-    var hyperdrive = new Part('hyperdrive')
-    var wagon = new Wagon({ name: 'Voyager' })
+  it('should not add an invalid part to any of the arrays', function() {
+    var hyperdrive = new Part('hyperdrive');
+    var wagon = new Wagon({ name: 'Voyager' });
 
-    wagon.addPart(hyperdrive)
+    wagon.addPart(hyperdrive);
 
-    assert.deepEqual(wagon.wheels, [])
-    assert.deepEqual(wagon.yokes, [])
-    assert.deepEqual(wagon.oxen, [])
-    assert.deepEqual(wagon.axles, [])
-  })
+    assert.deepEqual(wagon.wheels, []);
+    assert.deepEqual(wagon.yokes, []);
+    assert.deepEqual(wagon.oxen, []);
+    assert.deepEqual(wagon.axles, []);
+  });
 
-  it.skip('should have no settlers by default', function() {
-    var wagon = new Wagon({ name: 'Voyager' })
+  it('should have no settlers by default', function() {
+    var wagon = new Wagon({ name: 'Voyager' });
 
-    assert.deepEqual(wagon.settlers, [])
-  })
+    assert.deepEqual(wagon.settlers, []);
+  });
 
-  it.skip('can be constructed with settlers', function() {
-    var settler = new Settler({ name: 'Will', age: 33, nationality: 'Irish' })
-    var wagon = new Wagon({ name: 'Voyager', settlers: [settler] })
+  it('can be constructed with settlers', function() {
+    var settler = new Settler({ name: 'Will', age: 33, nationality: 'Irish' });
+    var wagon = new Wagon({ name: 'Voyager', settlers: [settler] });
 
-    assert.deepEqual(wagon.settlers, [settler])
-  })
+    assert.deepEqual(wagon.settlers, [settler]);
+  });
 
   // this is here as a test helper to make it faster to build a valid wagon
   // you should NOT be creating a makeValidWagon method of your own
@@ -184,7 +184,7 @@ describe('Wagon', function() {
     var ox1 = new Part('ox');
     var ox2 = new Part('ox');
     var yoke = new Part('yoke');
-    var settler = new Settler({ name: 'Will', age: 33, nationality: 'German' })
+    var settler = new Settler({ name: 'Will', age: 33, nationality: 'German' });
 
     var wagon = new Wagon({
       name: 'Pathfinder',
@@ -193,110 +193,111 @@ describe('Wagon', function() {
       oxen: [ox1, ox2],
       yokes: [yoke],
       settlers: [settler]
-    })
+    });
 
-    return wagon
-  }
+    return wagon;
+  };
 
-  it.skip('should be able to travel as a valid wagon', function() {
-    var wagon = makeValidWagon()
+  it('should be able to travel as a valid wagon', function() {
+    var wagon = makeValidWagon();
 
-    assert.isTrue(wagon.canTravel())
-  })
+    assert.isTrue(wagon.canTravel());
+  });
 
-  it.skip('should not be able to travel with only 3 wheels', function() {
-    var wagon = makeValidWagon()
+  it('should not be able to travel with only 3 wheels', function() {
+    var wagon = makeValidWagon();
 
-    wagon.wheels.pop()
+    wagon.wheels.pop();
 
-    assert.isFalse(wagon.canTravel())
-  })
+    assert.isFalse(wagon.canTravel());
+  });
 
-  it.skip('should not be able to travel with only 1 axle', function() {
-    var wagon = makeValidWagon()
+  it('should not be able to travel with only 1 axle', function() {
+    var wagon = makeValidWagon();
 
-    wagon.axles.pop()
+    wagon.axles.pop();
 
-    assert.isFalse(wagon.canTravel())
-  })
+    assert.isFalse(wagon.canTravel());
+  });
 
-  it.skip('should not be able to travel with less than 2 oxen', function() {
-    var wagon = makeValidWagon()
+  it('should not be able to travel with less than 2 oxen', function() {
+    var wagon = makeValidWagon();
 
-    wagon.oxen.pop()
+    wagon.oxen.pop();
 
-    assert.isFalse(wagon.canTravel())
-  })
+    assert.isFalse(wagon.canTravel());
+  });
 
-  it.skip('should not be able to travel without a yoke', function() {
-    var wagon = makeValidWagon()
+  it('should not be able to travel without a yoke', function() {
+    var wagon = makeValidWagon();
 
-    wagon.yokes.pop()
+    wagon.yokes.pop();
 
-    assert.isFalse(wagon.canTravel())
-  })
+    assert.isFalse(wagon.canTravel());
+  });
 
-  it.skip('should not be able to travel without a settler', function() {
-    var wagon = makeValidWagon()
+  it('should not be able to travel without a settler', function() {
+    var wagon = makeValidWagon();
 
-    wagon.settlers.pop()
+    wagon.settlers.pop();
 
-    assert.isFalse(wagon.canTravel())
-  })
+    assert.isFalse(wagon.canTravel());
+  });
 
-  it.skip('should not be able to travel without four working wheels', function() {
-    var wagon = makeValidWagon()
+  it('should not be able to travel without four working wheels', function() {
+    var wagon = makeValidWagon();
 
-    wagon.wheels[0].break()
+    wagon.wheels[0].break();
 
-    assert.isFalse(wagon.canTravel())
-  })
+    assert.isFalse(wagon.canTravel());
+  });
 
-  it.skip('should not be able to travel without two working axles', function() {
-    var wagon = makeValidWagon()
+  it('should not be able to travel without two working axles', function() {
+    var wagon = makeValidWagon();
 
-    wagon.axles[0].break()
+    wagon.axles[0].break();
 
-    assert.isFalse(wagon.canTravel())
-  })
+    assert.isFalse(wagon.canTravel());
+  });
 
-  it.skip('should not be able to travel without at least two working oxen', function() {
-    var wagon = makeValidWagon()
+  it('should not be able to travel without at least two working oxen', function() {
+    var wagon = makeValidWagon();
 
-    wagon.oxen[0].break()
+    wagon.oxen[0].break();
 
-    assert.isFalse(wagon.canTravel())
-  })
+    assert.isFalse(wagon.canTravel());
+  });
 
-  it.skip('must have at one yoke for every two oxen', function() {
-    var wagon = makeValidWagon()
-    var ox3 = new Part('ox')
-    var ox4 = new Part('ox')
+  it('must have at one yoke for every two oxen', function() {
+    var wagon = makeValidWagon();
+    var ox3 = new Part('ox');
+    var ox4 = new Part('ox');
 
-    wagon.addPart(ox3)
-    wagon.addPart(ox4)
+    wagon.addPart(ox3);
+    wagon.addPart(ox4);
 
-    assert.isFalse(wagon.canTravel())
-  })
+    assert.isFalse(wagon.canTravel());
+  });
 
-  it.skip('can travel with extra oxen if it has extra yokes', function() {
-    var wagon = makeValidWagon()
-    var ox3 = new Part('ox')
-    var ox4 = new Part('ox')
-    var yoke2 = new Part('yoke')
+  it('can travel with extra oxen if it has extra yokes', function() {
+    var wagon = makeValidWagon();
+    var ox3 = new Part('ox');
+    var ox4 = new Part('ox');
+    var yoke2 = new Part('yoke');
 
-    wagon.addPart(ox3)
-    wagon.addPart(ox4)
-    wagon.addPart(yoke2)
+    wagon.addPart(ox3);
+    wagon.addPart(ox4);
+    wagon.addPart(yoke2);
 
-    assert.isTrue(wagon.canTravel())
-  })
+    assert.isTrue(wagon.canTravel());
+  });
 
-  it.skip('should not be able to travel without at least one living settler', function() {
-    var wagon = makeValidWagon()
+  it('should not be able to travel without at least one living settler', function() {
+    var wagon = makeValidWagon();
 
-    wagon.settlers[0].status = 'dead'
+    wagon.settlers[0].status = 'dead';
 
-    assert.isFalse(wagon.canTravel())
-  })
-})
+    assert.isFalse(wagon.canTravel());
+  });
+
+});
