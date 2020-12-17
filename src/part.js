@@ -1,37 +1,22 @@
 class Part {
     constructor(type) {
-        // this.type = type;
-        this.validTypes = [
-            'wheel', 
-            'yoke', 
-            'axle', 
-            'ox',
-            undefined,
-        ];
-        this.type = this.validTypes.includes(type) ? type:undefined;
-            // valid types are 'wheel', 'yoke', 'axle', 'ox'
-            // this.type = this.validTypes.includes(type) ? type:undefined;
+        this.type = type;
+        this.validTypes = ['wheel', 'yoke', 'axle', 'ox', undefined];
+        this.type = this.validTypes.includes(this.type) ? this.type : undefined;
         this.broken = false;
-            //not (boolean) broken by default
-        //this.hasBeenRepaired = undefined;
-    }
+    };
+
     break() {
         this.broken = true;
-    }
-        //method break(): changes this.broken (boolean) to true, no perameter
+    };
+
     repair() {
-        this.broken = true !== this.hasBeenRepaired ? false:true;
+        this.broken = true !== this.hasBeenRepaired ? false : true;
+        this.broken = !this.hasBeenRepaired ? false : true;
         this.hasBeenRepaired = true;
-            // if: this.broken is true AND this.hasBeenRepaired is true
-                // this.broken = true 
-            // else: this.broken = false 
-    }
-        //method repair(): changes this.broken (boolean) from false to true
-            //this.hasBeenRepaired (boolean) defined as true
-}
+    };
 
-
-
+};
 
 
 module.exports = Part;

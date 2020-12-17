@@ -8,61 +8,36 @@ class Wagon {
         this.food = wagon.food;
         this.ammunition = wagon.ammunition;
         this.clothes = wagon.clothes;
-        this.settlers = wagon.settlers || [];   
-    }
-
+        this.settlers = wagon.settlers || [];
+    };
+    
     addPart(part) {
-        console.log('A', part);
-        part.validTypes.includes(part.type) && part.type !== undefined ? [
-            
-            this.wheels.push(part),
-            this.axles.push(part),
-            this.oxen.push(part),
-            this.yokes.push(part), 
-        ] 
-        : this;
-    }
+        if(part.type === 'wheel') this.wheels.push(part);
+        if(part.type === 'axle') this.axles.push(part);
+        if(part.type === 'ox') this.oxen.push(part);
+        if(part.type === 'yoke') this.yokes.push(part);
+    };
 
     canTravel() {
         return (
-            this.wheels.length < 4 ||
-            this.axles.length < 2 ||
-            this.oxen.length < 2 ||
-            this.yokes.length < 1 ||
-            this.settlers.length < 1
-                ? false:true
-        )
-    }
+            this.wheels.filter(part => !part.broken).length >= 4 &&
+            this.axles.filter(part => !part.broken).length >= 2 &&
+            this.oxen.filter(part => !part.broken).length >= 2 &&
+            this.yokes.filter(part => !part.broken).length >= 1 &&
+            Math.floor(this.oxen.length / 2) === this.yokes.length && 
+            this.settlers.filter(settler => settler.status != 'dead').length > 0
+        );
+    };
 
-    // break(array, index) {
-    //     var index = 0;
-    //     array.splice(index, 1);
-        
-    // }
-
-    // break() {[
-        
-    //     this.wheels.splice(part),
-    //     this.axles.splice(part),
-    //     this.oxen.splice(part),
-    //     this.yokes.splice(part),
-    // ]}
-    break() {
-        s
-    }
-}  
-            
-            
-            // console.log("1", this, "2", part, "3", this.wheels);
-            // console.log('A', `${part.type}s`);
-            // console.log('B', part, 'C', part.type);
-    
-
+};
 
 
 module.exports = Wagon;
-    // npm test test/wagon-test.js 
+// npm test test/wagon-test.js 
     
+
+/////////////// NOTES /////////////////
+///////////////////////////////////////
 
 //     addPart(part) {
 //         //type === "ox" ? `this.${type}en.push('${type}')`:
@@ -80,3 +55,42 @@ module.exports = Wagon;
 //         console.log('B', parts, 'C', `${part.type}`, 'D', this)
 
 //    }
+
+    // break(array, index) {
+    //     var index = 0;
+    //     array.splice(index, 1);
+        
+    // }
+
+    // break() {[
+        
+    //     this.wheels.splice(part),
+    //     this.axles.splice(part),
+    //     this.oxen.splice(part),
+    //     this.yokes.splice(part),
+    // ]}
+    
+  
+            
+            
+            // console.log("1", this, "2", part, "3", this.wheels);
+            // console.log('A', `${part.type}s`);
+            // console.log('B', part, 'C', part.type);
+    
+    /*
+    canTravel() {
+        console.log("this:", this);
+        console.log("broken:", this.wheels.filter(wheel => !wheel.broken).length < 4);
+        console.log("notDead:", this.settlers.filter(settler => settler.status != 'dead').length);
+        return (
+            this.wheels.filter(part => !part.broken).length < 4 ||
+            this.axles.filter(part => !part.broken).length < 2 ||
+            this.oxen.filter(part => !part.broken).length < 2 ||
+            this.yokes.filter(part => !part.broken).length < 1 ||
+            Math.floor(this.oxen.length / 2) !== this.yokes.length || 
+            this.settlers.filter(settler => settler.status != 'dead').length < 1
+            ? false : true
+        );
+    }
+    */
+

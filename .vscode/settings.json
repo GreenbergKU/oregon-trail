@@ -1,0 +1,13 @@
+{
+    "git.untrackedChanges": "separate",
+    "git.autofetch": true,
+    "github.autoPublish": true,
+    "git.supportCancellation": true,
+    "git.scanRepositories": [
+        "git@github.com:GreenbergKU.git",
+        "https://github.com/GreenbergKU",
+        "/Users/suzieq/turing/1bmod/projects"
+    ],
+    "github.allowUnsafeSSL": true,
+    "github.remoteName": "origin  git@github.com:GreenbergKU/oregon-trail.git"
+}
